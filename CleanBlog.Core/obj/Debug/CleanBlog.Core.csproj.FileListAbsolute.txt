@@ -122,7 +122,6 @@ C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\bin\Debug\Micro
 C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\bin\Debug\Microsoft.Owin.Security.OAuth.xml
 C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\bin\Debug\MiniProfiler.xml
 C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\bin\Debug\MiniProfiler.Shared.xml
-C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\bin\Debug\Newtonsoft.Json.xml
 C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\bin\Debug\Semver.xml
 C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\bin\Debug\Serilog.xml
@@ -168,3 +167,4 @@ C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\obj\Debug\Clean
 C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\obj\Debug\CleanBlog.Core.csproj.CopyComplete
 C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\obj\Debug\CleanBlog.Core.dll
 C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\obj\Debug\CleanBlog.Core.pdb
+C:\Users\mart.reuling\MyProjects\Umbraco-Tutorial\CleanBlog.Core\bin\Debug\SlackBotMessages.dll

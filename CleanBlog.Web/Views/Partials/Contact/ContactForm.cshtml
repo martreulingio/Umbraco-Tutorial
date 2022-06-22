@@ -1,0 +1,54 @@
+﻿@inherits  UmbracoViewPage<ContactViewModel>
+
+@using CleanBlog.Core.ViewModels
+@using CleanBlog.Core.Controllers
+
+<div id="form-outer">
+    @using (Ajax.BeginForm("SubmitForm", "ContactSurface", new AjaxOptions()
+    {
+        UpdateTargetId = "form-result",
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        OnSuccess = "contactForm.showResult",
+        OnFailure = "contactForm.showResult"
+
+    }, new { id = "contact-form" }))
+    {
+
+        @Html.HiddenFor(m => m.ContactFormId)
+
+        <div class="form-floating">
+            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+            <label for="name">Name</label>
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Name..." })
+            @Html.ValidationMessageFor(m => m.Name)
+        </div>
+        <div class="form-floating">
+            <input class="form-control" id="email" type="email" placeholder="Enter your email..." data-sb-validations="required,email" />
+            <label for="email">Email address</label>
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email..." })
+            @Html.ValidationMessageFor(m => m.Email)
+
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required"></textarea>
+            <label for="message">Message</label>
+            @Html.TextAreaFor(m => m.Message, new { @class = "form-control", placeholder = "Message...", rows = "6" })
+            @Html.ValidationMessageFor(m => m.Message)
+
+        </div>
+        <br />
+        <!-- Submit success message-->
+        <!---->
+        <!-- This is what your users will see when the form-->
+        <!-- has successfully submitted-->
+        <!-- Submit error message-->
+        <!---->
+        <!-- This is what your users will see when there is-->
+        <!-- an error submitting the form-->
+        <!-- Submit Button-->
+        <button class="btn btn-primary text-uppercase contact-submit" id="submitButton" type="submit">Send</button>
+    }
+
+</div>
+<div id="form-result"></div>

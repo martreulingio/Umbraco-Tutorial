@@ -145,10 +145,13 @@
       <HintPath>..\packages\MiniProfiler.Shared.4.0.138\lib\net461\MiniProfiler.Shared.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NPoco, Version=3.9.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NPoco.3.9.4\lib\net45\NPoco.dll</HintPath>
+    </Reference>
+    <Reference Include="Our.Umbraco.EditLink, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Our.Umbraco.EditLink.1.0.2\lib\net472\Our.Umbraco.EditLink.dll</HintPath>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -185,6 +188,9 @@
     </Reference>
     <Reference Include="Serilog.Sinks.Map, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>..\packages\Serilog.Sinks.Map.1.0.2\lib\netstandard2.0\Serilog.Sinks.Map.dll</HintPath>
+    </Reference>
+    <Reference Include="SlackBotMessages, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SlackBotMessages.2.1.0\lib\netstandard2.0\SlackBotMessages.dll</HintPath>
     </Reference>
     <Reference Include="Superpower, Version=1.0.0.0, Culture=neutral, PublicKeyToken=aec39280ded1b3a7, processorArchitecture=MSIL">
       <HintPath>..\packages\Superpower.2.3.0\lib\net45\Superpower.dll</HintPath>
@@ -318,34 +324,25 @@
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
-    <Content Include="Web.config" />
+    <Content Include="readme.txt" />
+    <Content Include="scripts\contactForm.js" />
+    <None Include="scripts\jquery-1.8.0.intellisense.js" />
+    <Content Include="scripts\jquery-1.8.0.js" />
+    <Content Include="scripts\jquery-1.8.0.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="scripts\pleasedontgo.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Data\Models\Article.generated.cs" />
-    <Compile Include="App_Data\Models\ArticleControls.generated.cs" />
-    <Compile Include="App_Data\Models\ArticleList.generated.cs" />
-    <Compile Include="App_Data\Models\Contact.generated.cs" />
-    <Compile Include="App_Data\Models\ContactFormControls.generated.cs" />
-    <Compile Include="App_Data\Models\Content.generated.cs" />
-    <Compile Include="App_Data\Models\ContentControls.generated.cs" />
-    <Compile Include="App_Data\Models\Error.generated.cs" />
-    <Compile Include="App_Data\Models\File.generated.cs" />
-    <Compile Include="App_Data\Models\Folder.generated.cs" />
-    <Compile Include="App_Data\Models\FooterControls.generated.cs" />
-    <Compile Include="App_Data\Models\HeaderControls.generated.cs" />
-    <Compile Include="App_Data\Models\Home.generated.cs" />
-    <Compile Include="App_Data\Models\IconLinkItem.generated.cs" />
-    <Compile Include="App_Data\Models\Image.generated.cs" />
-    <Compile Include="App_Data\Models\MainImageControls.generated.cs" />
-    <Compile Include="App_Data\Models\Member.generated.cs" />
-    <Compile Include="App_Data\Models\Search.generated.cs" />
-    <Compile Include="App_Data\Models\SEocontrols.generated.cs" />
-    <Compile Include="App_Data\Models\UmbracoMediaArticle.generated.cs" />
-    <Compile Include="App_Data\Models\UmbracoMediaAudio.generated.cs" />
-    <Compile Include="App_Data\Models\UmbracoMediaVectorGraphics.generated.cs" />
-    <Compile Include="App_Data\Models\UmbracoMediaVideo.generated.cs" />
-    <Compile Include="App_Data\Models\VisibilityControls.generated.cs" />
-    <Compile Include="App_Data\Models\XMlsitemap.generated.cs" />
+    <Compile Include="App_Data\Models\*.generated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -385,6 +382,8 @@
     <Content Include="Views\Error.cshtml" />
     <Content Include="Views\XMLSitemap.cshtml" />
     <Content Include="Views\Partials\Grid\Clean.cshtml" />
+    <Content Include="Views\Partials\Contact\ContactForm.cshtml" />
+    <Content Include="Views\Partials\Contact\Result.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -398,6 +397,7 @@
       <Name>CleanBlog.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -1,6 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
 
 @using ClientDependency.Core.Mvc
+@using Our.Umbraco.EditLink
 
 @{
     Layout = null;
@@ -12,6 +13,8 @@
 
     Html.RequiresJs("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js");
     Html.RequiresJs("js/scripts.js");
+    Html.RequiresJs("/scripts/pleasedontgo.js");
+
 }
 
 <!DOCTYPE html>
@@ -28,13 +31,16 @@
 </head>
 <body>
 
+    @Html.RenderEditLink(Model)
+
     @Html.Partial("~/Views/Partials/Navigation.cshtml")
 
     @RenderBody()
 
-
     @Html.Partial("~/Views/Partials/Footer.cshtml")
 
     @Html.RenderJsHere()
+
+    @RenderSection("ScriptsBottom", false)
 </body>
 </html>
